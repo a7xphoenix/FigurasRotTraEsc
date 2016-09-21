@@ -1,0 +1,16 @@
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\bin\Debug\GraficacionDeFiguras.exe.config
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\bin\Debug\GraficacionDeFiguras.exe
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\bin\Debug\GraficacionDeFiguras.pdb
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.csprojResolveAssemblyReference.cache
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\MainWindow.g.cs
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\App.g.cs
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras_MarkupCompile.cache
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras_MarkupCompile.lref
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\MainWindow.baml
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.g.resources
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.Properties.Resources.resources
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.csproj.GenerateResource.Cache
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.exe
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.pdb
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\Plano.g.cs
+c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\Plano.baml
