@@ -5,10 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GraficacionDeFiguras"
         mc:Ignorable="d"
-        Title="Plano" Height="700" Width="1200" SizeChanged="Window_SizeChanged" Loaded="Forma_Loaded">
+        WindowState="Maximized"   
+        Topmost="True"  
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"  
+        Title="Plano" 
+        Loaded="Forma_Loaded"
+        Height="auto" Width="auto">
     <Grid x:Name="grid1">
         <Canvas x:Name="canvas1">
-            <Canvas Name="canvasCoor" RenderTransformOrigin="0,0" Height="488" VerticalAlignment="Top" Width="946"/>
+            <Canvas Name="canvasCoor"/>
         </Canvas>
     </Grid>
 </Window>

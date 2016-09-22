@@ -14,3 +14,19 @@ c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\Grafica
 c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.pdb
 c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\Plano.g.cs
 c:\users\juan\documents\visual studio 2015\Projects\GraficacionDeFiguras\GraficacionDeFiguras\obj\Debug\Plano.baml
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\bin\Debug\GraficacionDeFiguras.exe.config
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.exe
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.pdb
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\bin\Debug\GraficacionDeFiguras.exe
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\bin\Debug\GraficacionDeFiguras.pdb
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.csprojResolveAssemblyReference.cache
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\MainWindow.g.cs
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\Plano.g.cs
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\App.g.cs
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras_MarkupCompile.cache
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras_MarkupCompile.lref
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\MainWindow.baml
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\Plano.baml
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.g.resources
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.Properties.Resources.resources
+C:\Users\rigor\OneDrive\Documentos\GitHub\FigurasRotTraEsc\GraficacionDeFiguras\obj\Debug\GraficacionDeFiguras.csproj.GenerateResource.Cache

@@ -13,9 +13,11 @@ namespace GraficacionDeFiguras
     {
         int radio;
         public double[] Coor;
-        public Circulo(int radio)
+        SolidColorBrush color;
+        public Circulo(int radio, SolidColorBrush color)
         {
             this.radio = radio;
+            this.color = color;
         }
 
         public Canvas Dibujar(ref Canvas Plano)
@@ -24,7 +26,7 @@ namespace GraficacionDeFiguras
             Ellipse miCirculo = new Ellipse();
             miCirculo.Width = this.radio * 2;
             miCirculo.Height = this.radio * 2;
-            miCirculo.Fill = new SolidColorBrush(Colors.Blue);
+            miCirculo.Fill = color;
 
             //Crear canvas nuevo
             Frame miniCanvas = new Frame();
@@ -37,7 +39,7 @@ namespace GraficacionDeFiguras
             //Agregar miniCanvas al plano
             Plano.Children.Add(miniCanvas);
             Canvas.SetLeft(miniCanvas, Plano.Width / 2 - this.radio + this.Coor[0]);
-            Canvas.SetTop(miniCanvas, Plano.Height / 2 - this.radio + this.Coor[1]);
+            Canvas.SetTop(miniCanvas, Plano.Height / 2 - this.radio + this.Coor[1]*-1);
 
             return miniCanvas;
         }

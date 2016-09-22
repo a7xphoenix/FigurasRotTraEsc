@@ -26,8 +26,8 @@ namespace GraficacionDeFiguras
         public Plano()
         {
             InitializeComponent();
-            canvasCoor.Width = Forma.Width;
-            canvasCoor.Height = Forma.Height;
+            canvasCoor.Width = System.Windows.SystemParameters.PrimaryScreenWidth; 
+            canvasCoor.Height = System.Windows.SystemParameters.PrimaryScreenHeight;
             PlanoCartesiano.Dibujar(ref canvasCoor);
 
             //Timers
@@ -55,10 +55,11 @@ namespace GraficacionDeFiguras
                 if (canvasCoor.Children[i] is Frame)
                 {
                     Frame aux = (Frame)canvasCoor.Children[i];
-                    Transformar.Escalar(ref aux, 0.1);
-                    Transformar.Rotar(ref aux, 1);
-                    Transformar.Traslacion(ref aux, canvasCoor.Width, canvasCoor.Height);
-                    Transformar.Aplicar(ref aux);
+                   // Transformar.Reflexion(ref canvasCoor, ref canvas1,1);
+                    //Transformar.Escalar(ref aux, 0.1);
+                   // Transformar.Rotar(ref aux, 1);
+                    //Transformar.Traslacion(ref aux, canvasCoor.Width, canvasCoor.Height);
+                    //Transformar.Aplicar(ref aux);
                 }
             }
         }

@@ -13,9 +13,11 @@ namespace GraficacionDeFiguras
     {
         int lado;
         public double[] Coor;
-        public Cuadrado(int lado)
+        SolidColorBrush color;
+        public Cuadrado(int lado , SolidColorBrush color)
         {
             this.lado = lado;
+            this.color = color;
         }
 
         public Canvas Dibujar(ref Canvas Plano)
@@ -24,7 +26,7 @@ namespace GraficacionDeFiguras
             Rectangle miCirculo = new Rectangle();
             miCirculo.Width = this.lado;
             miCirculo.Height = this.lado;
-            miCirculo.Fill = new SolidColorBrush(Colors.Blue);
+            miCirculo.Fill = color;
 
             //Crear canvas nuevo
             Frame miniCanvas = new Frame();
@@ -37,7 +39,7 @@ namespace GraficacionDeFiguras
             //Agregar miniCanvas al plano
             Plano.Children.Add(miniCanvas);
             Canvas.SetLeft(miniCanvas, Plano.Width / 2 - this.lado/2 + this.Coor[0]);
-            Canvas.SetTop(miniCanvas, Plano.Height / 2 - this.lado/2 + this.Coor[1]);
+            Canvas.SetTop(miniCanvas, Plano.Height / 2 - this.lado/2 + this.Coor[1]*-1);
 
             return miniCanvas;
         }

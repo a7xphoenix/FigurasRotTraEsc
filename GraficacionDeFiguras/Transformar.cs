@@ -75,6 +75,29 @@ namespace GraficacionDeFiguras
            // miCanvas.RenderTransform = scaleTransform1;
         }
 
+        public static void Reflexion(ref Canvas miCanvas , ref Canvas plano, int opcion)
+        {
+            Canvas nCanvas = new Canvas();
+            nCanvas.Width = plano.Width;
+            nCanvas.Height = plano.Height;
+            nCanvas.Background = Brushes.Red;
+            switch (opcion)
+            {
+                //Con respecto al eje X
+                case 1:
+                    Canvas.SetTop(miCanvas, (plano.Width/2) - miCanvas.Width);
+                    break;
+                //Con respecto al eje Y
+                case 2:
+                    Canvas.SetLeft(miCanvas, (plano.Height / 2) - miCanvas.Height);
+                    break;
+
+                default:
+                    break;
+            }
+            plano.Children.Add(nCanvas);
+        }
+
         public static void Aplicar(ref Frame miCanvas)
         {
             TransformGroup myTransformGroup = new TransformGroup();
