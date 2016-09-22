@@ -13,14 +13,14 @@ namespace GraficacionDeFiguras
     {
         int lado;
         public double[] Coor;
-        SolidColorBrush color;
-        public Cuadrado(int lado , SolidColorBrush color)
+        Brush color;
+        public Cuadrado(int lado , Brush color)
         {
             this.lado = lado;
             this.color = color;
         }
 
-        public Canvas Dibujar(ref Canvas Plano)
+        public Canvas Dibujar(ref Canvas Plano, bool Tranladar = false, bool Rotar = false, bool Escalar = false)
         {
             //Crear Cuadrado
             Rectangle miCirculo = new Rectangle();
@@ -29,7 +29,7 @@ namespace GraficacionDeFiguras
             miCirculo.Fill = color;
 
             //Crear canvas nuevo
-            Frame miniCanvas = new Frame();
+            Frame miniCanvas = new Frame(Tranladar, Rotar, Escalar);
             miniCanvas.Width = this.lado;
             miniCanvas.Height = this.lado;
             miniCanvas.Children.Add(miCirculo);

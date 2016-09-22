@@ -16,8 +16,8 @@ namespace GraficacionDeFiguras
         int lados;
         public double[] Coor;
         private PointCollection puntos = new PointCollection();
-        SolidColorBrush color;
-        public Poligono(int radio , int lados , SolidColorBrush color)
+        Brush color;
+        public Poligono(int radio , int lados , Brush color)
         {
             this.radio = radio;
             this.lados = lados;
@@ -26,10 +26,10 @@ namespace GraficacionDeFiguras
         }
 
 
-        public Canvas Dibujar(ref Canvas Plano)
+        public Canvas Dibujar(ref Canvas Plano, bool Tranladar = false, bool Rotar = false, bool Escalar = false)
         {
             //Crear canvas nuevo
-            Frame miniCanvas = new Frame();
+            Frame miniCanvas = new Frame(Tranladar, Rotar, Escalar);
             miniCanvas.Width = this.radio * 2;
             miniCanvas.Height = this.radio * 2;
           
@@ -54,6 +54,7 @@ namespace GraficacionDeFiguras
             Plano.Children.Add(miniCanvas);
             Canvas.SetLeft(miniCanvas, Plano.Width / 2 - this.radio + this.Coor[0]);
             Canvas.SetTop(miniCanvas, Plano.Height / 2 - this.radio + this.Coor[1]*-1);
+           
             return miniCanvas;
         }
         //calcula los puntos de cada arista

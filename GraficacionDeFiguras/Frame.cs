@@ -9,12 +9,18 @@ namespace GraficacionDeFiguras
 {
     public class Frame : Canvas
     {
-        public bool DirHorizontal = true, DirVertical = true, DirEscala = true;
-        double _Angulo = 0;
-        double _Escala = 0;
 
-        public Frame()
+        public bool DirHorizontal = true, DirVertical = true, DirEscala = true;
+        public bool Tranladar = false, Rotar = false, Escalar = false;
+        double _Angulo = 0;
+        double _Escala = 1;
+
+        public Frame(bool Tranladar = false,bool Rotar = false, bool Escalar = false)
         {
+            this.Tranladar = Tranladar;
+            this.Rotar = Rotar;
+            this.Escalar = Escalar;
+
             Random rnd = new Random();
 
             if (rnd.Next(1, 10) <= 5)
@@ -48,18 +54,20 @@ namespace GraficacionDeFiguras
             get { return _Escala; }
             set
             {
-                _Escala = value;
 
-                if (_Escala == 100)
+                if (_Escala >= 2)
                 {
-
-                    DirEscala = false;
+                    this.Escalar = false;
                 }
-                else if (_Escala == 0)
+                else
                 {
-
-                    DirEscala = true;
+                    _Escala += value;
+                    Console.WriteLine(_Escala);
                 }
+                //else if (_Escala == 0)
+                //{
+                //    Escalar = true;
+                //}
             }
         }
     }

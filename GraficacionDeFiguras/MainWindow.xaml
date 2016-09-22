@@ -37,8 +37,9 @@
             <TextBox x:Name="txtLados" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="81" Width="120"/>
         </Canvas>
         <Button x:Name="btnIniciar" Content="Graficar" HorizontalAlignment="Left" Height="42" Margin="227,206,0,-248" VerticalAlignment="Top" Width="162" Click="btnIniciar_Click"/>
-        <CheckBox x:Name="chboxRotar" Content="Rotar" Margin="216,119,53,-134"/>
-        <CheckBox x:Name="chboxEscalar" Content="Escalar" Margin="216,159,53,-174"/>
-        <CheckBox x:Name="chboxTransportar" Content="Transportar" Margin="216,139,53,-154"/>
+        <CheckBox x:Name="chboxRotar" Content="Rotar" Margin="216,119,53,-134" IsChecked="True"/>
+        <CheckBox x:Name="chboxEscalar" Content="Escalar" Margin="216,159,53,-174" IsChecked="False"/>
+        <CheckBox x:Name="chboxTransportar" Content="Transportar" Margin="216,139,53,-154" IsChecked="False"/>
+        <Button x:Name="btnDeshacer" Content="Deshacer" HorizontalAlignment="Left" Height="34" Margin="66,206,0,-240" VerticalAlignment="Top" Width="117" Click="btnDeshacer_Click"/>
     </Grid>
 </Window>

@@ -55,11 +55,16 @@ namespace GraficacionDeFiguras
                 if (canvasCoor.Children[i] is Frame)
                 {
                     Frame aux = (Frame)canvasCoor.Children[i];
-                   // Transformar.Reflexion(ref canvasCoor, ref canvas1,1);
-                    //Transformar.Escalar(ref aux, 0.1);
-                   // Transformar.Rotar(ref aux, 1);
-                    //Transformar.Traslacion(ref aux, canvasCoor.Width, canvasCoor.Height);
-                    //Transformar.Aplicar(ref aux);
+                    //Transformar.Reflexion(ref canvasCoor, ref canvas1,1);
+                    if(aux.Tranladar)
+                        Transformar.Traslacion(ref aux, canvasCoor.Width, canvasCoor.Height);
+                    if(aux.Rotar)
+                        Transformar.Rotar(ref aux, 1);
+                    if (aux.Escalar)
+                    {
+                        Transformar.Escalar(ref aux, 0.01);
+                    }
+                    Transformar.Aplicar(ref aux);
                 }
             }
         }

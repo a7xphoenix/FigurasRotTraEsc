@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -38,11 +39,11 @@ namespace GraficacionDeFiguras
                 //resta
                 movY = -2;
             }
-            if (x > MaxWidth)
+            if (x + miCanvas.Width > MaxWidth)
                 miCanvas.DirHorizontal = false;
             else if (x < 0)
                 miCanvas.DirHorizontal = true;
-            if (y > MaxHeight)
+            if (y + miCanvas.Height > MaxHeight)
                 miCanvas.DirVertical = true;
             else if (y <= 0)
                 miCanvas.DirVertical = false;
@@ -52,58 +53,65 @@ namespace GraficacionDeFiguras
             Canvas.SetLeft(miCanvas, x1);
             Canvas.SetTop(miCanvas, y1);
         }
-        static RotateTransform rotateTransform1;
         public static void Rotar(ref Frame miCanvas, double angulo)
         {
-            rotateTransform1 = new RotateTransform(++miCanvas.Angulo, 0.5, 0);
-            //miCanvas.RenderTransform = rotateTransform1;
+            RotateTransform rotateTransform1;
+            rotateTransform1 = new RotateTransform(++miCanvas.Angulo, miCanvas.Width/2, miCanvas.Height/2);
+            miCanvas.RenderTransform = rotateTransform1;
         }
 
-        static ScaleTransform scaleTransform1;
         public static void Escalar(ref Frame miCanvas, double valor)
         {
+        ScaleTransform scaleTransform1;
             if (miCanvas.DirEscala)
             {
-                miCanvas.Escala += valor;
+                miCanvas.Escala = valor;
                 scaleTransform1 = new ScaleTransform(miCanvas.Escala, miCanvas.Escala);
             }
             else
             {
-                miCanvas.Escala += valor;
+                miCanvas.Escala = valor;
                 scaleTransform1 = new ScaleTransform(miCanvas.Escala, miCanvas.Escala);
             }
-           // miCanvas.RenderTransform = scaleTransform1;
+            miCanvas.RenderTransform = scaleTransform1;
         }
 
-        public static void Reflexion(ref Canvas miCanvas , ref Canvas plano, int opcion)
+        public static void Reflexion(Frame miCanvas , ref Canvas plano, int opcion , double x , double y)
         {
-            Canvas nCanvas = new Canvas();
-            nCanvas.Width = plano.Width;
-            nCanvas.Height = plano.Height;
-            nCanvas.Background = Brushes.Red;
+            Frame reflexion = new Frame();
+            foreach (UIElement item in miCanvas.Children)
+            {
+                var xaml = System.Windows.Markup.XamlWriter.Save(item);
+                var deepCopy = System.Windows.Markup.XamlReader.Parse(xaml) as UIElement;
+                reflexion.Children.Add(deepCopy);
+            }
+          
             switch (opcion)
             {
                 //Con respecto al eje X
                 case 1:
-                    Canvas.SetTop(miCanvas, (plano.Width/2) - miCanvas.Width);
+                    Canvas.SetLeft(reflexion, plano.Width/2 + x - miCanvas.Width/2);
+                    Canvas.SetTop(reflexion, plano.Height / 2 + (y *-1) - miCanvas.Height);
+                     
                     break;
                 //Con respecto al eje Y
                 case 2:
-                    Canvas.SetLeft(miCanvas, (plano.Height / 2) - miCanvas.Height);
+                    Canvas.SetLeft(reflexion, (plano.Width / 2) - miCanvas.Width/2 + x*-1);
+                    Canvas.SetTop(reflexion, (plano.Height / 2) + y - miCanvas.Height/2);
                     break;
 
                 default:
                     break;
             }
-            plano.Children.Add(nCanvas);
+            plano.Children.Add(reflexion);
         }
 
         public static void Aplicar(ref Frame miCanvas)
         {
-            TransformGroup myTransformGroup = new TransformGroup();
-            myTransformGroup.Children.Add(rotateTransform1);
-            myTransformGroup.Children.Add(scaleTransform1);
-            miCanvas.RenderTransform = rotateTransform1;
+            //TransformGroup myTransformGroup = new TransformGroup();
+            //myTransformGroup.Children.Add(rotateTransform1);
+            //myTransformGroup.Children.Add(scaleTransform1);
+            //miCanvas.RenderTransform = rotateTransform1;
         }
     }
 }

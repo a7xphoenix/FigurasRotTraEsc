@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GraficacionDeFiguras"
         mc:Ignorable="d"
         WindowState="Maximized"   
-        Topmost="True"  
+        Topmost="False"  
         ResizeMode="NoResize" 
         WindowStartupLocation="CenterScreen"  
         Title="Plano" 

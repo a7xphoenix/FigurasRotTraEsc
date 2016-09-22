@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScreenServerWPF.Figuras;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,41 +22,63 @@ namespace GraficacionDeFiguras
     /// </summary>
     public partial class MainWindow : Window
     {
+        Plano nuevoPlano = new Plano();
         public MainWindow()
         {
             InitializeComponent();
+            nuevoPlano.Show();
+          
         }
 
         private void btnIniciar_Click(object sender, RoutedEventArgs e)
         {
-            Plano nuevoPlano = new Plano();
+            bool[] Conf = new bool[3];
+            Conf[0] = (bool)chboxTransportar.IsChecked;
+            Conf[1] = (bool)chboxRotar.IsChecked;
+            Conf[2] = (bool)chboxEscalar.IsChecked;
+            BrushConverter b = new BrushConverter();
             switch (cboxTipo.Text)
             {
                 case "Circulo":
-                    Circulo circulo = new Circulo(int.Parse(txtRadio.Text),Brushes.RosyBrown);
+                    Circulo circulo = new Circulo(int.Parse(txtRadio.Text),(Brush)b.ConvertFromString(Colores.NuevoColor()));
                     circulo.Coor = new double[] { int.Parse(txtXo.Text), int.Parse(txtYo.Text) };
-                    circulo.Dibujar(ref nuevoPlano.canvasCoor);
-                    //Transformar.Reflexion(ref circulo.Dibujar(ref nuevoPlano.canvasCoor), ref nuevoPlano.canvas1, 1);
+                    circulo.Dibujar(ref nuevoPlano.canvasCoor, Conf[0], Conf[1], Conf[2]);
+                  
                     break;
                 case "Cuadrado":
-                    Cuadrado cuadrado = new Cuadrado(int.Parse(txtA.Text), Brushes.RosyBrown);
+                    Cuadrado cuadrado = new Cuadrado(int.Parse(txtA.Text), (Brush)b.ConvertFromString(Colores.NuevoColor()));
                     cuadrado.Coor = new double[] { int.Parse(txtXo.Text), int.Parse(txtYo.Text) };
-                    cuadrado.Dibujar(ref nuevoPlano.canvasCoor);
+                    cuadrado.Dibujar(ref nuevoPlano.canvasCoor, Conf[0], Conf[1], Conf[2]);
                     break;
                 case "Poligono":
-                    Poligono poligono = new Poligono(int.Parse(txtRadio.Text),int.Parse(txtLados.Text), Brushes.RosyBrown);
+                    Poligono poligono = new Poligono(int.Parse(txtRadio.Text),int.Parse(txtLados.Text), (Brush)b.ConvertFromString(Colores.NuevoColor()));
                     poligono.Coor = new double[] { int.Parse(txtXo.Text), int.Parse(txtYo.Text) };
-                    poligono.Dibujar(ref nuevoPlano.canvasCoor);
+                    poligono.Dibujar(ref nuevoPlano.canvasCoor, Conf[0], Conf[1], Conf[2]);
                     break;
-
                 case "Elipse":
-                    Elipse Elipse = new Elipse(int.Parse(txtA.Text), int.Parse(txtB.Text), Brushes.RosyBrown);
+                    Elipse Elipse = new Elipse(int.Parse(txtA.Text), int.Parse(txtB.Text), (Brush)b.ConvertFromString(Colores.NuevoColor()));
                     Elipse.Coor = new double[] { int.Parse(txtXo.Text), int.Parse(txtYo.Text) };
-                    Elipse.Dibujar(ref nuevoPlano.canvasCoor);
+                    Elipse.Dibujar(ref nuevoPlano.canvasCoor, Conf[0], Conf[1], Conf[2]);
                     break;
             }
 
-            nuevoPlano.ShowDialog();
+            //nuevoPlano.ShowDialog();
+        }
+
+        private void btnDeshacer_Click(object sender, RoutedEventArgs e)
+        {
+            int indice = -1;
+            for (int i = nuevoPlano.canvasCoor.Children.Count -1 ; i >= 0; i++)
+            {
+                if(nuevoPlano.canvasCoor.Children[i] is Frame)
+                {
+                    indice = i;
+                    break;
+                }
+            }
+
+            if(indice > -1)
+                nuevoPlano.canvasCoor.Children.RemoveAt(indice);
         }
     }
 }

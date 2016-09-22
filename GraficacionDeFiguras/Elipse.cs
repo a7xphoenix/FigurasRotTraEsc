@@ -13,15 +13,15 @@ namespace GraficacionDeFiguras
     {
         int a,b;
         public double[] Coor;
-        SolidColorBrush color;
-        public Elipse(int a ,int b, SolidColorBrush color)
+        Brush color;
+        public Elipse(int a ,int b, Brush color)
         {
             this.a = a;
             this.b = b;
             this.color = color;
         }
 
-        public Canvas Dibujar(ref Canvas Plano)
+        public Canvas Dibujar(ref Canvas Plano, bool Tranladar = false, bool Rotar = false, bool Escalar = false)
         {
             //Crear Circulo
             Ellipse miElipse = new Ellipse();
@@ -30,7 +30,7 @@ namespace GraficacionDeFiguras
             miElipse.Fill = color;
 
             //Crear canvas nuevo
-            Frame miniCanvas = new Frame();
+            Frame miniCanvas = new Frame(Tranladar, Rotar, Escalar);
             miniCanvas.Width = a;
             miniCanvas.Height = b;
             miniCanvas.Children.Add(miElipse);
