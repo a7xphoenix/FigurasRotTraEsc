@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GraficacionDeFiguras"
         mc:Ignorable="d"
-        Title="MainWindow" Height="297.368" Width="431.579">
+        Title="MainWindow" Height="343.913" Width="483.295">
     <Grid Margin="0,0,0,732">
         <Canvas x:Name="canvas1" Margin="10,-1,10,492">
             <TextBox x:Name="txtXo" Height="23" Canvas.Left="213" TextWrapping="Wrap" Text="1" Canvas.Top="10" Width="60"/>
             <Label x:Name="label_Copy" Content="Xo" Canvas.Left="189" Canvas.Top="7"/>
             <TextBox x:Name="txtYo" Height="23" Canvas.Left="307" TextWrapping="Wrap" Text="1" Canvas.Top="11" Width="60"/>
             <Label x:Name="label_Copy1" Content="Yo" Canvas.Left="278" Canvas.Top="7"/>
-            <ComboBox x:Name="cboxTipo" Canvas.Left="19" Canvas.Top="11" Width="156">
+            <ComboBox x:Name="cboxTipo" Canvas.Left="19" Canvas.Top="12" Width="156">
                 <ComboBoxItem Content="Linea" HorizontalAlignment="Left" Width="154"/>
                 <ComboBoxItem Content="Circulo" HorizontalAlignment="Left" Width="154"/>
                 <ComboBoxItem Content="Cuadrado" HorizontalAlignment="Left" Width="154"/>
@@ -20,26 +20,30 @@
                 <ComboBoxItem Content="Elipse" HorizontalAlignment="Left" Width="154"/>
                 <ComboBoxItem Content="Parabola" HorizontalAlignment="Left" Width="154"/>
             </ComboBox>
-            <Label x:Name="label" Content="Radio" Canvas.Left="10" Canvas.Top="46"/>
-            <Label x:Name="label_Copy2" Content="A" Canvas.Left="10" Canvas.Top="107"/>
-            <Label x:Name="label_Copy3" Content="B" Canvas.Left="10" Canvas.Top="138" RenderTransformOrigin="0.425,2.577"/>
-            <Label x:Name="label_Copy4" Content="C" Canvas.Left="10" Canvas.Top="169"/>
-            <TextBox x:Name="txtRadio" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="49" Width="120"/>
-            <TextBox x:Name="txtA" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="111" Width="120"/>
-            <TextBox x:Name="txtB" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="142" Width="120"/>
-            <TextBox x:Name="txtC" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="172" Width="120"/>
-            <CheckBox x:Name="chboxInvertir" Content="Graficar con Respecto a X" Canvas.Left="201" Canvas.Top="49"/>
-            <TextBox x:Name="txtXf" Height="23" Canvas.Left="307" TextWrapping="Wrap" Text="50" Canvas.Top="81" Width="30"/>
-            <TextBox x:Name="txtXi" Height="23" Canvas.Left="230" TextWrapping="Wrap" Text="50" Canvas.Top="81" Width="30" RenderTransformOrigin="-0.8,0.435"/>
-            <Label x:Name="label_Copy5" Content="Xi" Canvas.Left="201" Canvas.Top="81"/>
-            <Label x:Name="label_Copy6" Content="Xf" Canvas.Left="278" Canvas.Top="81" RenderTransformOrigin="3.167,3.038"/>
-            <Label x:Name="label_Copy7" Content="Lados" Canvas.Left="10" Canvas.Top="78"/>
-            <TextBox x:Name="txtLados" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="81" Width="120"/>
+            <Label x:Name="label" Content="Radio" Canvas.Left="10" Canvas.Top="80"/>
+            <Label x:Name="label_Copy2" Content="A" Canvas.Left="10" Canvas.Top="141"/>
+            <Label x:Name="label_Copy3" Content="B" Canvas.Left="10" Canvas.Top="172" RenderTransformOrigin="0.425,2.577"/>
+            <Label x:Name="label_Copy4" Content="C" Canvas.Left="10" Canvas.Top="203"/>
+            <TextBox x:Name="txtRadio" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="83" Width="120"/>
+            <TextBox x:Name="txtA" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="145" Width="120"/>
+            <TextBox x:Name="txtB" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="176" Width="120"/>
+            <TextBox x:Name="txtC" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="206" Width="120"/>
+            <TextBox x:Name="txtXf" Height="23" Canvas.Left="300" TextWrapping="Wrap" Text="50" Canvas.Top="49" Width="30"/>
+            <TextBox x:Name="txtXi" Height="23" Canvas.Left="223" TextWrapping="Wrap" Text="50" Canvas.Top="49" Width="30" RenderTransformOrigin="-0.8,0.435"/>
+            <Label x:Name="label_Copy5" Content="Xi" Canvas.Left="194" Canvas.Top="49"/>
+            <Label x:Name="label_Copy6" Content="Xf" Canvas.Left="271" Canvas.Top="49" RenderTransformOrigin="3.167,3.038"/>
+            <Label x:Name="label_Copy7" Content="Lados" Canvas.Left="10" Canvas.Top="112"/>
+            <TextBox x:Name="txtLados" Height="23" Canvas.Left="55" TextWrapping="Wrap" Text="5" Canvas.Top="115" Width="120"/>
         </Canvas>
-        <Button x:Name="btnIniciar" Content="Graficar" HorizontalAlignment="Left" Height="42" Margin="227,206,0,-248" VerticalAlignment="Top" Width="162" Click="btnIniciar_Click"/>
-        <CheckBox x:Name="chboxRotar" Content="Rotar" Margin="216,119,53,-134" IsChecked="True"/>
-        <CheckBox x:Name="chboxEscalar" Content="Escalar" Margin="216,159,53,-174" IsChecked="False"/>
-        <CheckBox x:Name="chboxTransportar" Content="Transportar" Margin="216,139,53,-154" IsChecked="False"/>
-        <Button x:Name="btnDeshacer" Content="Deshacer" HorizontalAlignment="Left" Height="34" Margin="66,206,0,-240" VerticalAlignment="Top" Width="117" Click="btnDeshacer_Click"/>
+        <Button x:Name="btnIniciar" Content="Graficar" HorizontalAlignment="Left" Height="42" Margin="240,249,0,-291" VerticalAlignment="Top" Width="162" Click="btnIniciar_Click"/>
+
+        <Button x:Name="btnDeshacer" Content="Deshacer" HorizontalAlignment="Left" Height="42" Margin="51,249,0,-291" VerticalAlignment="Top" Width="148" Click="btnDeshacer_Click"/>
+        <GroupBox x:Name="groupBox" Header="Transformaciones" HorizontalAlignment="Left" Height="152" Margin="204,77,0,-229" VerticalAlignment="Top" Width="239"/>
+        <CheckBox x:Name="chboxRotar" Content="Rotar" Margin="237,100,32,-115" IsChecked="False"/>
+        <CheckBox x:Name="chboxEscalar" Content="Escalar" Margin="237,140,32,-155" IsChecked="False"/>
+        <CheckBox x:Name="chboxTransportar" Content="Transportar" Margin="237,120,32,-135" IsChecked="False"/>
+        <CheckBox x:Name="chboxReX" Content="Reflexion con respecto a X" Margin="237,160,32,-175" IsChecked="False"/>
+        <CheckBox x:Name="chboxReY" Content="Reflexion con respecto a Y" Margin="237,180,32,-195" IsChecked="False"/>
+        <CheckBox x:Name="chboxReO" Content="Reflexion con respecto a Origen" Margin="237,200,32,-215" IsChecked="False"/>
     </Grid>
 </Window>

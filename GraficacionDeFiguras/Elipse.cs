@@ -21,7 +21,7 @@ namespace GraficacionDeFiguras
             this.color = color;
         }
 
-        public Canvas Dibujar(ref Canvas Plano, bool Tranladar = false, bool Rotar = false, bool Escalar = false)
+        public Canvas Dibujar(ref Canvas Plano, bool Tranladar = false, bool Rotar = false, bool Escalar = false, int reflexion = 0)
         {
             //Crear Circulo
             Ellipse miElipse = new Ellipse();
@@ -41,7 +41,8 @@ namespace GraficacionDeFiguras
             Plano.Children.Add(miniCanvas);
             Canvas.SetLeft(miniCanvas, Plano.Width / 2 - (this.a/2)  + this.Coor[0]);
             Canvas.SetTop(miniCanvas, Plano.Height / 2  -(this.b/2)+ this.Coor[1] * -1);
-
+            //Reflexion
+            Transformar.Reflexion(miniCanvas, ref Plano, reflexion, this.Coor[0], this.Coor[1] * -1);
             return miniCanvas;
         }
     }

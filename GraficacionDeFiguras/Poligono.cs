@@ -26,7 +26,7 @@ namespace GraficacionDeFiguras
         }
 
 
-        public Canvas Dibujar(ref Canvas Plano, bool Tranladar = false, bool Rotar = false, bool Escalar = false)
+        public Canvas Dibujar(ref Canvas Plano, bool Tranladar = false, bool Rotar = false, bool Escalar = false, int reflexion = 0)
         {
             //Crear canvas nuevo
             Frame miniCanvas = new Frame(Tranladar, Rotar, Escalar);
@@ -54,7 +54,8 @@ namespace GraficacionDeFiguras
             Plano.Children.Add(miniCanvas);
             Canvas.SetLeft(miniCanvas, Plano.Width / 2 - this.radio + this.Coor[0]);
             Canvas.SetTop(miniCanvas, Plano.Height / 2 - this.radio + this.Coor[1]*-1);
-           
+            //Reflexion
+            Transformar.Reflexion(miniCanvas, ref Plano, reflexion, this.Coor[0], this.Coor[1] * -1);
             return miniCanvas;
         }
         //calcula los puntos de cada arista

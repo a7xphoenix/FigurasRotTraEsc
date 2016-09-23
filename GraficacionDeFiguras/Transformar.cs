@@ -85,25 +85,36 @@ namespace GraficacionDeFiguras
                 var deepCopy = System.Windows.Markup.XamlReader.Parse(xaml) as UIElement;
                 reflexion.Children.Add(deepCopy);
             }
-          
             switch (opcion)
             {
                 //Con respecto al eje X
                 case 1:
                     Canvas.SetLeft(reflexion, plano.Width/2 + x - miCanvas.Width/2);
                     Canvas.SetTop(reflexion, plano.Height / 2 + (y *-1) - miCanvas.Height);
-                     
+                    plano.Children.Add(reflexion);
                     break;
                 //Con respecto al eje Y
                 case 2:
                     Canvas.SetLeft(reflexion, (plano.Width / 2) - miCanvas.Width/2 + x*-1);
                     Canvas.SetTop(reflexion, (plano.Height / 2) + y - miCanvas.Height/2);
+                    plano.Children.Add(reflexion);
                     break;
-
+                    //con respecto al origen
+                case 3:
+                    Canvas.SetLeft(reflexion, (plano.Width / 2) - miCanvas.Width / 2 + x * -1);
+                    Canvas.SetTop(reflexion, plano.Height / 2 + (y * -1) - miCanvas.Height);
+                    plano.Children.Add(reflexion);
+                    break;
+                case 4:
+                    Reflexion(miCanvas, ref plano, 1, x, y);
+                    Reflexion(miCanvas, ref plano, 2, x, y);
+                    Reflexion(miCanvas, ref plano, 3, x, y);
+                    
+                    break;
                 default:
                     break;
             }
-            plano.Children.Add(reflexion);
+           
         }
 
         public static void Aplicar(ref Frame miCanvas)
